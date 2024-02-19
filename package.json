@@ -2,9 +2,12 @@
   "name": "swc-compiler-test",
   "version": "1.0.0",
   "description": "swc compiler demo",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sec": "swc ./src/index",
+    "build": "swc build ./src -d dist",
+    "build-f": "swc ./file.js -o output.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/asif-learning-organization/swc-compiler/issues"
   },
-  "homepage": "https://github.com/asif-learning-organization/swc-compiler#readme"
+  "homepage": "https://github.com/asif-learning-organization/swc-compiler#readme",
+  "devDependencies": {
+    "@swc/cli": "^0.3.9",
+    "@swc/core": "^1.4.1",
+    "events": "^3.3.0"
+  }
 }
